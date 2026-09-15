@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frodo Baggins - MySpace Profile (LOTR Edition)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-shire">
+    <!-- Top Global Navigation Bar -->
+    <div id="myspace-nav">
+        <div class="nav-container">
+            <div class="nav-brand">MySpace.com | Middle-earth Edition</div>
+            <div class="nav-links">
+                <a href="#home" onclick="alert('Welcome to MySpace Middle-earth!')">Home</a> |
+                <a href="#browse" onclick="alert('Browsing Fellowship members...')">Browse</a> |
+                <a href="#search" onclick="alert('Searching for the One Ring...')">Search</a> |
+                <a href="#invite" onclick="alert('Invite sent via Carrier Raven!')">Invite</a> |
+                <a href="#film" onclick="alert('Palantír Video Cinema')">Film</a> |
+                <a href="#music" onclick="alert('Bards of Eriador Music')">Music</a> |
+                <a href="#mail" onclick="alert('Palantír Mail (1 unread)')">Mail</a> |
+                <a href="#blog" onclick="alert('Frodo\'s Journal')">Blog</a>
+            </div>
+            <div class="theme-selector-wrapper">
+                <label for="theme-select">Realm Theme: </label>
+                <select id="theme-select" class="retro-select">
+                    <option value="theme-shire" selected>🌱 Shire Peaceful Green</option>
+                    <option value="theme-mordor">🔥 Mordor Fire & Ash</option>
+                    <option value="theme-elven">✨ Lothlórien Elven Gold</option>
+                    <option value="theme-classic">💾 Classic MySpace 2006</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Outer Container -->
+    <div id="main-container">
+
+        <!-- Top Profile Banner & Announcement -->
+        <header id="profile-header">
+            <div class="header-content">
+                <h1 class="profile-title">Frodo Baggins <span class="ring-icon">💍</span></h1>
+                <p class="profile-headline">"One Ring to rule them all, One Ring to find them..."</p>
+            </div>
+            <div class="header-status">
+                <span class="status-badge">ONLINE NOW! <span class="blink">🟢</span></span>
+                <div class="visitor-counter">
+                    <span>Profile Views:</span>
+                    <span id="view-count" class="counter-display">0003492</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Two Column MySpace Layout -->
+        <div class="profile-columns">
+
+            <!-- LEFT COLUMN -->
+            <div class="left-col">
+
+                <!-- Profile Photo Card -->
+                <div class="profile-box profile-photo-box">
+                    <h2 class="box-title">Frodo Baggins</h2>
+                    <div class="avatar-wrapper">
+                        <!-- SVG / CSS Avatar representation -->
+                        <div class="avatar-frame">
+                            <svg class="avatar-svg" viewBox="0 0 100 100" width="160" height="160">
+                                <rect width="100" height="100" fill="#2d4a27"/>
+                                <!-- Hobbit Curly Hair -->
+                                <circle cx="50" cy="38" r="28" fill="#4a2e13"/>
+                                <circle cx="38" cy="28" r="10" fill="#5c3a17"/>
+                                <circle cx="62" cy="28" r="10" fill="#5c3a17"/>
+                                <circle cx="50" cy="22" r="10" fill="#5c3a17"/>
+                                <!-- Face -->
+                                <circle cx="50" cy="42" r="20" fill="#fce0ca"/>
+                                <!-- Eyes -->
+                                <circle cx="43" cy="40" r="3" fill="#2b5e8c"/>
+                                <circle cx="57" cy="40" r="3" fill="#2b5e8c"/>
+                                <circle cx="44" cy="39" r="1" fill="#fff"/>
+                                <circle cx="58" cy="39" r="1" fill="#fff"/>
+                                <!-- Smile -->
+                                <path d="M 44 48 Q 50 53 56 48" stroke="#a35151" stroke-width="2" fill="none"/>
+                                <!-- Elven Cloak & Leaf Pin -->
+                                <path d="M 20 100 L 50 60 L 80 100 Z" fill="#3a5a40"/>
+                                <path d="M 50 60 L 50 72" stroke="#d4af37" stroke-width="2"/>
+                                <circle cx="50" cy="66" r="4" fill="#a3b18a"/>
+                            </svg>
+                        </div>
+                        <p class="status-quote">"I will take the Ring, though I do not know the way."</p>
+                    </div>
+
+                    <div class="profile-details-mini">
+                        <p><strong>Mood:</strong> Determined 🗡️</p>
+                        <p><strong>Location:</strong> Bag End, Hobbiton / En route to Mordor</p>
+                        <p><strong>Age:</strong> 50 (Hobbit adulthood)</p>
+                    </div>
+                </div>
+
+                <!-- Contact Box -->
+                <div class="profile-box contact-box">
+                    <h2 class="box-title">Contacting Frodo</h2>
+                    <div class="contact-grid">
+                        <button class="contact-btn" onclick="alert('Raven sent to Bag End!')">✉️ Send Message</button>
+                        <button class="contact-btn" onclick="alert('Added to Fellowship!')">➕ Add to Fellowship</button>
+                        <button class="contact-btn" onclick="alert('Palantír connection requested...')">🔮 Palantír Call</button>
+                        <button class="contact-btn" onclick="alert('Forwarded to Samwise Gamgee')">🦅 Forward to Friend</button>
+                        <button class="contact-btn" onclick="openSendRavenModal()">📜 Send Raven</button>
+                        <button class="contact-btn" onclick="alert('Added to Favorites!')">⭐ Favorite Hobbit</button>
+                    </div>
+                </div>
+
+                <!-- MySpace URL Box -->
+                <div class="profile-box url-box">
+                    <h2 class="box-title">MySpace URL:</h2>
+                    <p class="url-text">http://www.myspace.com/ringbearer_frodo</p>
+                </div>
+
+                <!-- Interests & Info Box -->
+                <div class="profile-box info-box">
+                    <h2 class="box-title">Frodo's Interests</h2>
+                    <table class="info-table">
+                        <tr>
+                            <td class="info-label">General</td>
+                            <td class="info-data">Stargazing, Pipe-weed in the Shire, Elven lore, Writing memoirs in Red Book of Westmarch</td>
+                        </tr>
+                        <tr>
+                            <td class="info-label">Music</td>
+                            <td class="info-data">Hobbit Drinking Songs, Elvish Hymns to Elbereth, Howard Shore Soundtracks</td>
+                        </tr>
+                        <tr>
+                            <td class="info-label">Movies</td>
+                            <td class="info-data">The Lord of the Rings Trilogy, The Hobbit, An Unexpected Journey</td>
+                        </tr>
+                        <tr>
+                            <td class="info-label">Heroes</td>
+                            <td class="info-data">Bilbo Baggins, Elrond, Gandalf the Grey, Samwise Gamgee</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN -->
+            <div class="right-col">
+
+                <!-- Marquee / Status Banner -->
+                <div class="status-marquee-container">
+                    <marquee class="retro-marquee" behavior="scroll" direction="left" scrollamount="4">
+                        ✨ LATEST UPDATE: Walking into Mordor. One does not simply walk in, but we are trying anyway! ✨
+                    </marquee>
+                </div>
+
+                <!-- Custom Web Audio Music Player -->
+                <div class="profile-box music-player-box">
+                    <h2 class="box-title">🎵 Middle-earth Audio Player (Web Audio Synthesizer)</h2>
+                    <div class="player-content">
+                        <div class="player-display">
+                            <span id="player-track-title" class="track-title-text">Concerning Hobbits (Shire Theme)</span>
+                            <canvas id="visualizer-canvas" width="280" height="40"></canvas>
+                        </div>
+                        <div class="player-controls">
+                            <button id="btn-play" class="retro-btn">▶ Play / ⏸ Pause</button>
+                            <button id="btn-next" class="retro-btn">⏭ Next Track</button>
+                            <button id="btn-mute" class="retro-btn">🔊 Mute</button>
+                        </div>
+                        <div class="volume-control">
+                            <label for="volume-slider">Volume: </label>
+                            <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="0.5">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blurbs Section -->
+                <div class="profile-box blurbs-box">
+                    <h2 class="box-title">Frodo's Blurbs</h2>
+
+                    <h3 class="sub-title">About Me:</h3>
+                    <p class="blurb-text">
+                        Greetings, traveler! I am Frodo Baggins, nephew of Bilbo Baggins of Bag End.
+                        Once a simple hobbit enjoying second breakfast in the Shire, I am now on an perilous quest to Mount Doom to destroy the One Ring.
+                        When I'm not avoiding Nazgûl or resisting the temptation of evil, I enjoy studying Sindarin Elvish and relaxing by the Shire riverbanks.
+                    </p>
+
+                    <h3 class="sub-title">Who I'd Like to Meet:</h3>
+                    <p class="blurb-text">
+                        Anyone with courage, loyalty, and a knack for cooking lembas bread or stewed rabbits.
+                        Also looking to connect with Rangers, Elves, Wizards, and stout-hearted Dwarves. (No Orcs or Ringwraiths please!)
+                    </p>
+                </div>
+
+                <!-- Top 8 Fellowship Friends Grid -->
+                <div class="profile-box top8-box">
+                    <div class="top8-header">
+                        <h2 class="box-title">Frodo's Top 8 Fellowship Friends</h2>
+                        <button id="btn-reorder-top8" class="retro-btn small-btn">🔀 Reorder Fellowship</button>
+                    </div>
+                    <p class="top8-subtitle">Frodo has <span class="highlight">8</span> friends in his Fellowship.</p>
+
+                    <div id="top8-grid" class="top8-grid">
+                        <!-- Top 8 items rendered dynamically via app.js -->
+                    </div>
+                </div>
+
+                <!-- Interactive Comments System -->
+                <div class="profile-box comments-box">
+                    <h2 class="box-title">Fellowship Comments (<span id="comment-count">0</span>)</h2>
+
+                    <!-- Post Comment Form -->
+                    <form id="comment-form" class="comment-form">
+                        <h3>Leave a Comment for Frodo:</h3>
+                        <div class="form-group">
+                            <label for="comment-author">Your Name / Title:</label>
+                            <input type="text" id="comment-author" placeholder="e.g., Boromir of Gondor" required class="retro-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="comment-avatar">Avatar Character:</label>
+                            <select id="comment-avatar" class="retro-select">
+                                <option value="sam">Samwise Gamgee</option>
+                                <option value="gollum">Gollum / Smeagol</option>
+                                <option value="sauron">Sauron</option>
+                                <option value="elrond">Elrond Half-Elven</option>
+                                <option value="galadriel">Lady Galadriel</option>
+                                <option value="custom">Generic Shire Hobbit</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="comment-body">Comment:</label>
+                            <textarea id="comment-body" rows="3" placeholder="Write your words of encouragement or warnings..." required class="retro-textarea"></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="retro-btn primary-btn">Post Comment</button>
+                            <button type="button" id="btn-reset-comments" class="retro-btn danger-btn">Reset Defaults</button>
+                        </div>
+                    </form>
+
+                    <!-- Comments List -->
+                    <div id="comments-list" class="comments-list">
+                        <!-- Rendered by app.js from localStorage -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="profile-footer">
+            <p>MySpace LOTR Profile &copy; 2006-2025 Third Age. Built for the Free Peoples of Middle-earth.</p>
+            <p class="footer-links">
+                <a href="#about">About</a> | <a href="#faq">FAQ</a> | <a href="#terms">Terms of Middle-earth</a> | <a href="#privacy">Privacy</a>
+            </p>
+        </footer>
+    </div>
+
+    <!-- Modals -->
+    <!-- Reorder Top 8 Modal -->
+    <div id="modal-reorder" class="modal-overlay hidden">
+        <div class="modal-content">
+            <h3>🔀 Reorder Your Top 8 Friends</h3>
+            <p>Move friends up or down to re-prioritize your Fellowship:</p>
+            <ul id="reorder-list" class="reorder-list"></ul>
+            <div class="modal-actions">
+                <button id="btn-save-reorder" class="retro-btn primary-btn">Save Order</button>
+                <button id="btn-close-reorder" class="retro-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Send Raven Modal -->
+    <div id="modal-raven" class="modal-overlay hidden">
+        <div class="modal-content">
+            <h3>📜 Send Carrier Raven to Middle-earth</h3>
+            <form id="raven-form">
+                <div class="form-group">
+                    <label for="raven-recipient">Recipient:</label>
+                    <select id="raven-recipient" class="retro-select">
+                        <option value="Samwise Gamgee">Samwise Gamgee</option>
+                        <option value="Aragorn">Aragorn</option>
+                        <option value="Gandalf">Gandalf the Grey</option>
+                        <option value="Galadriel">Lady Galadriel</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="raven-message">Message:</label>
+                    <textarea id="raven-message" rows="3" placeholder="Fly fast, O Raven..." required class="retro-textarea"></textarea>
+                </div>
+                <div class="modal-actions">
+                    <button type="submit" class="retro-btn primary-btn">Dispatch Raven</button>
+                    <button type="button" id="btn-close-raven" class="retro-btn">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="audio.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
