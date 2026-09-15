@@ -18,6 +18,7 @@
                 <a href="#invite" onclick="alert('Invite sent via Carrier Raven!')">Invite</a> |
                 <a href="#film" onclick="alert('Palantír Video Cinema')">Film</a> |
                 <a href="#music" onclick="alert('Bards of Eriador Music')">Music</a> |
+                <a href="#minigame">Games</a> |
                 <a href="#mail" onclick="alert('Palantír Mail (1 unread)')">Mail</a> |
                 <a href="#blog" onclick="alert('Frodo\'s Journal')">Blog</a>
             </div>
@@ -165,6 +166,42 @@
                         <div class="volume-control">
                             <label for="volume-slider">Volume: </label>
                             <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="0.5">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mini Game Section -->
+                <div id="minigame" class="profile-box minigame-box">
+                    <h2 class="box-title">🎮 Mini Game: Quest to Mount Doom</h2>
+                    <div class="game-container">
+                        <div class="game-hud">
+                            <div class="hud-item">Score: <span id="game-score" class="hud-val">0</span></div>
+                            <div class="hud-item">High: <span id="game-highscore" class="hud-val">0</span></div>
+                            <div class="hud-item">Distance: <span id="game-distance" class="hud-val">1000</span> leagues</div>
+                            <div class="hud-item">Realm: <span id="game-realm" class="hud-val">Shire</span></div>
+                        </div>
+                        <div class="canvas-wrapper">
+                            <canvas id="game-canvas" width="400" height="240"></canvas>
+                            <div id="game-overlay" class="game-overlay">
+                                <h3 id="game-overlay-title">Frodo's Quest to Mount Doom</h3>
+                                <p id="game-overlay-desc">Use Arrow Keys / WASD or On-Screen buttons to guide Frodo. Collect Lembas Bread 🍞 & Rings 💍 while dodging Nazgûl 🗡️ & Sauron's Eye 👁️!</p>
+                                <button id="btn-start-game" class="retro-btn primary-btn">▶ Start Quest</button>
+                            </div>
+                        </div>
+                        <div class="game-controls">
+                            <div class="control-btns">
+                                <button id="btn-game-pause" class="retro-btn small-btn">⏸ Pause</button>
+                                <button id="btn-game-restart" class="retro-btn small-btn">🔄 Restart</button>
+                                <button id="btn-game-sfx" class="retro-btn small-btn">🔊 SFX: ON</button>
+                            </div>
+                            <div class="dpad-container">
+                                <button class="dpad-btn dpad-up" id="btn-dpad-up">▲</button>
+                                <div class="dpad-row">
+                                    <button class="dpad-btn dpad-left" id="btn-dpad-left">◀</button>
+                                    <button class="dpad-btn dpad-right" id="btn-dpad-right">▶</button>
+                                </div>
+                                <button class="dpad-btn dpad-down" id="btn-dpad-down">▼</button>
+                            </div>
                         </div>
                     </div>
                 </div>
