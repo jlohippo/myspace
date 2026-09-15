@@ -69,6 +69,73 @@ body.theme-classic {
     --link-hover: #ff6600;
 }
 
+body.theme-gondor {
+    --bg-primary: #0f172a;
+    --bg-container: #f8fafc;
+    --nav-bg: #1e293b;
+    --box-border: #64748b;
+    --box-header-bg: #334155;
+    --box-header-text: #f8fafc;
+    --text-primary: #0f172a;
+    --link-color: #2563eb;
+    --link-hover: #38bdf8;
+    --badge-bg: #1e40af;
+}
+
+body.theme-rivendell {
+    --bg-primary: #2e1065;
+    --bg-container: #faf5ff;
+    --nav-bg: #3b0764;
+    --box-border: #9333ea;
+    --box-header-bg: #7e22ce;
+    --box-header-text: #ffffff;
+    --text-primary: #3b0764;
+    --link-color: #a855f7;
+    --link-hover: #e879f9;
+}
+
+body.theme-rohan {
+    --bg-primary: #291e09;
+    --bg-container: #fffbeb;
+    --nav-bg: #451a03;
+    --box-border: #b45309;
+    --box-header-bg: #d97706;
+    --box-header-text: #ffffff;
+    --text-primary: #451a03;
+    --link-color: #b45309;
+    --link-hover: #f59e0b;
+}
+
+body.theme-isengard {
+    --bg-primary: #18181b;
+    --bg-container: #27272a;
+    --nav-bg: #09090b;
+    --box-border: #52525b;
+    --box-header-bg: #3f3f46;
+    --box-header-text: #f4f4f5;
+    --text-primary: #f4f4f5;
+    --text-muted: #a1a1aa;
+    --link-color: #fb923c;
+    --link-hover: #f97316;
+    --btn-bg: #3f3f46;
+    --btn-border: #71717a;
+}
+
+body.theme-scene {
+    --bg-primary: #000000;
+    --bg-container: #111111;
+    --nav-bg: #ff007f;
+    --box-border: #00ffff;
+    --box-header-bg: #00ffff;
+    --box-header-text: #000000;
+    --text-primary: #ffffff;
+    --text-muted: #aaaaaa;
+    --link-color: #ff007f;
+    --link-hover: #00ffff;
+    --btn-bg: #222222;
+    --btn-border: #ff007f;
+}
+
 /* Reset and Base Styles */
 * {
     box-sizing: border-box;
